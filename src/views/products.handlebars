@@ -1,0 +1,20 @@
+<div>
+    <h2 class="page_title">PRODUCTS</h2>
+    <h3>Bienvenido {{user.rol}}, {{user.name}}</h3>
+    <div class="productsContainer">
+        {{#each products}}
+            <div class="product">
+                <h3>{{title}}</h3>
+                <p>Price: ${{price}}</p>
+                <p>Category: {{category}}</p>
+                <button class="product_AddCartButton">add to cart</button>
+            </div>
+        {{/each}}
+    </div>
+    {{#if prevLink}}
+        <a href="{{prevLink}}">Previous Page</a>
+    {{/if}}
+    {{#if nextLink}}
+        <a href="{{nextLink}}">Next Page</a>
+    {{/if}}
+</div>
